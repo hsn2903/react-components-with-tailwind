@@ -1,13 +1,14 @@
-import Image from "next/image";
+"use client";
 import { Inter } from "next/font/google";
-import styles from "./page.module.css";
+
+import Modal from "@/components/modal/Modal";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Modal />
     </main>
   );
 }
