@@ -1,14 +1,25 @@
 "use client";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 
 import Modal from "@/components/modal/Modal";
+import DefaultStarter from "@/components/DefaultStarter";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
     <main>
-      <Modal />
+      <style jsx global>{`
+        html {
+          font-family: ${poppins.style.fontFamily};
+        }
+      `}</style>
+      {/* <Modal /> */}
+      <DefaultStarter />
     </main>
   );
 }
